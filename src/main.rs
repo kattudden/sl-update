@@ -82,7 +82,16 @@ fn main() {
         ranking.push(team);
     }
 
-    println!("Ranking: {:?}", ranking);
+    // print table header
+    println!("{: <4} | {: <25} | {: <5} | {: <4} | {: <5} | {: <6} | {: <2} | {: <2} | {: <3} | {: <6} |",
+        "Rank", "Team", "Games", "Wins", "Draws", "Losses", "GF", "GA", "+/-", "Points"); 
 
+    for t in ranking {
+
+        // print each row
+        println!("{: <4} | {: <25} | {: <5} | {: <4} | {: <5} | {: <6} | {: <2} | {: <2} | {: <3} | {: <6} |",
+            t.pos, t.name, t.games_played, t.victories, t.draws, t.losses, t.gf, t.ga, t.pm, t.points); 
+
+    }
 
 }
